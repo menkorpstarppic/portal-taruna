@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Aplikasi Web</title>
     <style>
-        /* Mengunci layar utama agar tidak bisa digeser ke samping */
+        /* Mengunci total seluruh halaman agar tidak bisa digeser keluar frame */
         html, body {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
             position: fixed;
-            background-color: #f4f6f8;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            touch-action: none; /* Mencegah gestur geser liar di level body */
         }
         
-        /* Mengatur iframe agar pas di layar HP */
+        /* Memaksa iframe terkunci tepat di dalam layar penuh */
         iframe {
             width: 100%;
             height: 100%;
             border: none;
             display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
